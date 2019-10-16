@@ -1,0 +1,24 @@
+{
+  "name": "midterm_maze",
+  "version": "1.0.0",
+  "description": "This is the midterm for COMP397",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^3.6.4",
+    "createjs": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eisenritter-COMP397/Midterm-Maze.git"
+  },
+  "author": "George Zhou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eisenritter-COMP397/Midterm-Maze/issues"
+  },
+  "homepage": "https://github.com/Eisenritter-COMP397/Midterm-Maze#readme"
+}
