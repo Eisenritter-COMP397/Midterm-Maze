@@ -4,8 +4,11 @@
   "description": "This is the midterm for COMP397",
   "main": "index.js",
   "dependencies": {
-    "typescript": "^3.6.4",
-    "createjs": "^1.0.1"
+    "createjs": "^1.0.1",
+    "easeljs": "^1.0.2",
+    "preloadjs": "^1.0.1",
+    "soundjs": "^1.0.1",
+    "typescript": "^3.6.4"
   },
   "devDependencies": {},
   "scripts": {
