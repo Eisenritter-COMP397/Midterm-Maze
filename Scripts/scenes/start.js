@@ -24,11 +24,21 @@ var scenes;
         StartScene.prototype.Start = function () {
             // Initialize our objects for this scene
             this.background = new objects.Background(this.assetManager);
+            this.welcomeLabel = new objects.Label("Welcome to George's Maze", "30px", "Fantasy", "#FF0000", 300, 250, true);
+            this.startButton = new objects.Button(this.assetManager, "startButton", 200, 500);
+            this.Main();
         };
         StartScene.prototype.Update = function () {
         };
+        StartScene.prototype.startButtonClick = function () {
+            //Change our state from start to game
+            objects.Game.currentScene = config.scene.GAME;
+        };
         StartScene.prototype.Main = function () {
             this.addChild(this.background);
+            this.addChild(this.welcomeLabel);
+            this.addChild(this.startButton);
+            this.startButton.on("click", this.startButtonClick);
         };
         return StartScene;
     }(objects.Scene));

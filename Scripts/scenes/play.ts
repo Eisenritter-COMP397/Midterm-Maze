@@ -4,7 +4,8 @@ module scenes{
         //private playLabel: objects.Label;
         //private nextButton: objects.Button;
         //private backButton: objects.Button;
-        private background: objects.Background;
+        private maze: objects.Maze;
+        private player: objects.Player;
 
         // Constructor
         constructor(assetManager:createjs.LoadQueue){
@@ -15,14 +16,15 @@ module scenes{
         public Start():void{
             // Initialize our objects for this scene
 
-            this.background = new objects.Background(this.assetManager);
-
+            this.maze = new objects.Maze(this.assetManager);
+            this.player = new objects.Player(this.assetManager);
             this.Main();
         }
 
         public Update():void{
             // update the background
-            this.background.Update();
+            this.maze.Update();
+            this.player.Update();
         }
 
         private nextButtonClick():void{
@@ -38,7 +40,8 @@ module scenes{
         public Main():void{
             //Order Matters when adding game objects
             //Add items to our scenne
-            this.addChild(this.background);
+            this.addChild(this.maze);
+            this.addChild(this.player);
         }
     }
 }

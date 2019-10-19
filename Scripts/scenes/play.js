@@ -23,12 +23,14 @@ var scenes;
         }
         PlayScene.prototype.Start = function () {
             // Initialize our objects for this scene
-            this.background = new objects.Background(this.assetManager);
+            this.maze = new objects.Maze(this.assetManager);
+            this.player = new objects.Player(this.assetManager);
             this.Main();
         };
         PlayScene.prototype.Update = function () {
             // update the background
-            this.background.Update();
+            this.maze.Update();
+            this.player.Update();
         };
         PlayScene.prototype.nextButtonClick = function () {
             //Change our state from start to game
@@ -41,7 +43,8 @@ var scenes;
         PlayScene.prototype.Main = function () {
             //Order Matters when adding game objects
             //Add items to our scenne
-            this.addChild(this.background);
+            this.addChild(this.maze);
+            this.addChild(this.player);
         };
         return PlayScene;
     }(objects.Scene));

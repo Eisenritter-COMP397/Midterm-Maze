@@ -13,35 +13,34 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var objects;
 (function (objects) {
-    var Background = /** @class */ (function (_super) {
-        __extends(Background, _super);
+    var Maze = /** @class */ (function (_super) {
+        __extends(Maze, _super);
         //Constructor
-        function Background(assetManager) {
-            var _this = _super.call(this, assetManager.getResult("background")) || this;
+        function Maze(assetManager) {
+            var _this = _super.call(this, assetManager, "maze") || this;
             _this.Start();
             return _this;
         }
         //Functions
         //Initializing our variables with default values
-        Background.prototype.Start = function () {
+        Maze.prototype.Start = function () {
+            this.y = this.halfH;
+            this.x = this.halfW;
         };
         // Updated 60 times per seconds (60FPS)
-        Background.prototype.Update = function () {
+        Maze.prototype.Update = function () {
         };
         // Resets the position of the object
-        Background.prototype.Reset = function () {
+        Maze.prototype.Reset = function () {
         };
         // Move the object
-        Background.prototype.Move = function () {
+        Maze.prototype.Move = function () {
         };
         // Collision Detection
-        Background.prototype.CheckBound = function () {
-            if (this.y >= 0) {
-                this.Reset();
-            }
+        Maze.prototype.CheckBound = function () {
         };
-        return Background;
-    }(createjs.Bitmap));
-    objects.Background = Background;
+        return Maze;
+    }(objects.GameObjects));
+    objects.Maze = Maze;
 })(objects || (objects = {}));
-//# sourceMappingURL=background.js.map
+//# sourceMappingURL=maze.js.map

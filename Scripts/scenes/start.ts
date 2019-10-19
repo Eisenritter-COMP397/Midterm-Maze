@@ -2,6 +2,8 @@ module scenes{
     export class StartScene extends objects.Scene{
         // Variables
         private background:objects.Background;
+        private welcomeLabel: objects.Label;
+        private startButton: objects.Button;
         
         //Constructor
         constructor(assetManager:createjs.LoadQueue){
@@ -11,15 +13,29 @@ module scenes{
         
         public Start():void{
             // Initialize our objects for this scene
-            this.background = new objects.Background(this.assetManager)
+            this.background = new objects.Background(this.assetManager);
+
+            this.welcomeLabel = new objects.Label("Welcome to George's Maze", "30px", "Fantasy",
+            "#FF0000", 300,250,true)
+
+            this.startButton = new objects.Button(this.assetManager, "startButton",200,500);
+            this.Main();
         }
 
         public Update():void{
             
         }
 
+        private startButtonClick():void{
+            //Change our state from start to game
+            objects.Game.currentScene = config.scene.GAME;
+        }
+
         public Main():void{
             this.addChild(this.background);
+            this.addChild(this.welcomeLabel);
+            this.addChild(this.startButton);
+            this.startButton.on("click", this.startButtonClick);
         }
     }
 }

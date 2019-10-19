@@ -2,14 +2,15 @@ module objects{
     export class Player extends objects.GameObjects{
         //Variables
         // Constructor
+
         constructor(assetManager:createjs.LoadQueue){
             super(assetManager, "player");
             this.Start();
         }
         //Methods
         public Start():void{
-            this.y = 600;
-            this.x = 240;
+            this.y = 300;
+            this.x = 500;
         }
         //Update//
         public Update() {

@@ -13,7 +13,10 @@
     let currentState:number;
 
     assetManifest=[
-
+        {id:"maze", src:"./Assets/maze.gif"},
+        {id:"background", src:"./Assets/background.jpg"},
+        {id:"startButton", src:"./Assets/StartButton.png"},
+        {id:"player", src:"./Assets/Player.png"}
     ]
 
     function Init(){

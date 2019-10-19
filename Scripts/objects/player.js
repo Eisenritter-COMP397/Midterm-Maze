@@ -24,8 +24,8 @@ var objects;
         }
         //Methods
         Player.prototype.Start = function () {
-            this.y = 600;
-            this.x = 240;
+            this.y = 300;
+            this.x = 500;
         };
         //Update//
         Player.prototype.Update = function () {

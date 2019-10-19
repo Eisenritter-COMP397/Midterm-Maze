@@ -1,10 +1,8 @@
 module objects{
-    export class Background extends createjs.Bitmap{
-        //Variables
-        private speedY:number; // Speed of background scrolling on Y-axis
+    export class Maze extends objects.GameObjects{
         //Constructor
         constructor(assetManager:createjs.LoadQueue){
-            super(assetManager.getResult("background"));
+            super(assetManager,"maze");
 
             this.Start();
 
@@ -12,6 +10,9 @@ module objects{
         //Functions
         //Initializing our variables with default values
         public Start():void{
+            this.y = this.halfH;
+            this.x = this.halfW;
+            
         }
         // Updated 60 times per seconds (60FPS)
         public Update():void{
@@ -24,9 +25,6 @@ module objects{
         }
         // Collision Detection
         public CheckBound():void{
-            if(this.y>=0){
-                this.Reset();
-            }
         }
     }
 }
