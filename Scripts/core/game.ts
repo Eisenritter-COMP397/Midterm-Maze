@@ -8,6 +8,8 @@
     let assetManager:createjs.LoadQueue;
     let assetManifest: any[];
 
+    let keyboardManager: managers.Keyboard;
+    let walldetectionManager: managers.WallDetection;
     // Store current scene and state number
     let currentScene:objects.Scene;
     let currentState:number;
@@ -58,6 +60,10 @@
         currentScene.Update();
         stage.update();
     }
+
+            // Create our keyboard object and set the global reference
+            keyboardManager = new managers.Keyboard;
+            objects.Game.keyboardManager = keyboardManager;
 
     function Main(){
         console.log("Game Start...");

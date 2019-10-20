@@ -5,6 +5,8 @@
     var stage;
     var assetManager;
     var assetManifest;
+    var keyboardManager;
+    var walldetectionManager;
     // Store current scene and state number
     var currentScene;
     var currentState;
@@ -47,6 +49,9 @@
         currentScene.Update();
         stage.update();
     }
+    // Create our keyboard object and set the global reference
+    keyboardManager = new managers.Keyboard;
+    objects.Game.keyboardManager = keyboardManager;
     function Main() {
         console.log("Game Start...");
         // Finite State Machine
