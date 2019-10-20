@@ -8,8 +8,8 @@ module objects {
         }
         // Methods
         public Start():void {
-            this.y = 232;
-            this.x = 656;
+            this.y = 303;
+            this.x = 655;
         }
         public Update():void {
         }

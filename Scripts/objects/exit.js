@@ -24,8 +24,8 @@ var objects;
         }
         // Methods
         Exit.prototype.Start = function () {
-            this.y = 232;
-            this.x = 656;
+            this.y = 303;
+            this.x = 655;
         };
         Exit.prototype.Update = function () {
         };

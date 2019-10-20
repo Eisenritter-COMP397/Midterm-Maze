@@ -34,20 +34,12 @@ module scenes{
 
         public Update():void{
             this.player.Update();
+            //console.log(managers.Collision.Check(this.player, this.exit));
+            if(managers.Collision.Check(this.player, this.exit)){
+                objects.Game.currentScene = config.scene.OVER;
+            };
+            
         }
-
-        private nextButtonClick():void{
-            //Change our state from start to game
-            objects.Game.currentScene = config.scene.OVER;
-        }
-
-        private backButtonClick():void{
-            //Change our state from start to game
-            objects.Game.currentScene = config.scene.START;
-        }
-
-
-
 
         public Main():void{
             //Order Matters when adding game objects

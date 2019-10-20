@@ -22,9 +22,14 @@ var scenes;
             return _this;
         }
         OverScene.prototype.Start = function () {
+            this.background = new objects.Background(this.assetManager);
             // Initialize our objects for this scene
-            this.overLabel = new objects.Label("Game Over", "60px", "Consolas", "#000000", 320, 240, true);
-            this.backButton = new objects.Button(this.assetManager, "backButton", 100, 340);
+            this.overLabel = new objects.Label("Congratulations, you won the game!", "30px", "Fantasy", "#FF0000", 300, 250, true);
+            this.backButton = new objects.Button(this.assetManager, "backButton", 200, 500);
+            createjs.Sound.stop();
+            this.backgroundMusic = createjs.Sound.play("start_music");
+            this.backgroundMusic.loop = -1;
+            this.backgroundMusic.volume = 1;
             this.Main();
         };
         OverScene.prototype.Update = function () {
@@ -35,6 +40,7 @@ var scenes;
         };
         OverScene.prototype.Main = function () {
             //Add items to our scenne
+            this.addChild(this.background);
             this.addChild(this.overLabel);
             this.addChild(this.backButton);
             this.backButton.on("click", this.backButtonClick);

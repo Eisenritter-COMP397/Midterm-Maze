@@ -35,14 +35,11 @@ var scenes;
         };
         PlayScene.prototype.Update = function () {
             this.player.Update();
-        };
-        PlayScene.prototype.nextButtonClick = function () {
-            //Change our state from start to game
-            objects.Game.currentScene = config.scene.OVER;
-        };
-        PlayScene.prototype.backButtonClick = function () {
-            //Change our state from start to game
-            objects.Game.currentScene = config.scene.START;
+            //console.log(managers.Collision.Check(this.player, this.exit));
+            if (managers.Collision.Check(this.player, this.exit)) {
+                objects.Game.currentScene = config.scene.OVER;
+            }
+            ;
         };
         PlayScene.prototype.Main = function () {
             //Order Matters when adding game objects

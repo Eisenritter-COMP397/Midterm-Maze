@@ -14,6 +14,7 @@
         { id: "maze", src: "./Assets/maze.gif" },
         { id: "background", src: "./Assets/background.jpg" },
         { id: "startButton", src: "./Assets/StartButton.png" },
+        { id: "backButton", src: "./Assets/StartButton.png" },
         { id: "player", src: "./Assets/Player.png" },
         { id: "exit", src: "./Assets/Exit.png" },
         { id: "start_music", src: "./Assets/Sound/start.mp3" },

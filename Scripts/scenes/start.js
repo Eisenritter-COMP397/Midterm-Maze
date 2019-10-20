@@ -26,6 +26,7 @@ var scenes;
             this.background = new objects.Background(this.assetManager);
             this.welcomeLabel = new objects.Label("Welcome to George's Maze", "30px", "Fantasy", "#FF0000", 300, 250, true);
             this.startButton = new objects.Button(this.assetManager, "startButton", 200, 500);
+            createjs.Sound.stop();
             this.backgroundMusic = createjs.Sound.play("start_music");
             this.backgroundMusic.loop = -1;
             this.backgroundMusic.volume = 1;
