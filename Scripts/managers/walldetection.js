@@ -1,5 +1,7 @@
 var managers;
 (function (managers) {
+    // this is the unique Wall detection class. It works by drawing a square to the destination where the player wants to move to, 
+    // and if there are any black pixel within the square (AKA determines the edge of the maze wall), then the player will not be move 
     var WallDetection = /** @class */ (function () {
         function WallDetection() {
         }
