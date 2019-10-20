@@ -25,6 +25,7 @@ var scenes;
             // Initialize our objects for this scene
             this.maze = new objects.Maze(this.assetManager);
             this.player = new objects.Player(this.assetManager);
+            this.exit = new objects.Exit(this.assetManager);
             // Initialize Sound
             createjs.Sound.stop();
             this.backgroundMusic = createjs.Sound.play("play_music");
@@ -33,8 +34,6 @@ var scenes;
             this.Main();
         };
         PlayScene.prototype.Update = function () {
-            // update the background
-            this.maze.Update();
             this.player.Update();
         };
         PlayScene.prototype.nextButtonClick = function () {
@@ -50,6 +49,7 @@ var scenes;
             //Add items to our scenne
             this.addChild(this.maze);
             this.addChild(this.player);
+            this.addChild(this.exit);
         };
         return PlayScene;
     }(objects.Scene));

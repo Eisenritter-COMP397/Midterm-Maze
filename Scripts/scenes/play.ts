@@ -6,6 +6,7 @@ module scenes{
         //private backButton: objects.Button;
         private maze: objects.Maze;
         private player: objects.Player;
+        private exit: objects.Exit;
 
         private backgroundMusic: createjs.AbstractSoundInstance;
 
@@ -20,6 +21,7 @@ module scenes{
 
             this.maze = new objects.Maze(this.assetManager);
             this.player = new objects.Player(this.assetManager);
+            this.exit = new objects.Exit(this.assetManager);
 
             // Initialize Sound
             createjs.Sound.stop();
@@ -31,8 +33,6 @@ module scenes{
         }
 
         public Update():void{
-            // update the background
-            this.maze.Update();
             this.player.Update();
         }
 
@@ -54,6 +54,7 @@ module scenes{
             //Add items to our scenne
             this.addChild(this.maze);
             this.addChild(this.player);
+            this.addChild(this.exit);
         }
     }
 }
