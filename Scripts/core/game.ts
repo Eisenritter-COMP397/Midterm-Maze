@@ -18,7 +18,10 @@
         {id:"maze", src:"./Assets/maze.gif"},
         {id:"background", src:"./Assets/background.jpg"},
         {id:"startButton", src:"./Assets/StartButton.png"},
-        {id:"player", src:"./Assets/Player.png"}
+        {id:"player", src:"./Assets/Player.png"},
+        {id:"start_music", src: "./Assets/Sound/start.mp3"},
+        {id:"play_music", src: "./Assets/Sound/gameplay.mp3"},
+        {id:"blop", src: "./Assets/Sound/Blop.wav"}
     ]
 
     function Init(){
